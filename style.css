@@ -1,0 +1,18 @@
+
+body{
+    margin: 0px;
+    background-color:rgb(1, 25, 58);
+    color: white;
+    padding-left: 30px;
+}
+table {
+  border: 2px solid white;
+  border-collapse: collapse;
+  width:fit-content;
+}
+
+th, td {
+  border: 2px solid white;
+  padding: 5px;
+ 
+}
