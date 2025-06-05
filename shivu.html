@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .heart-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+
+        .heart {
+            color: white;
+            background-color: powderblue;
+            height: 100px;
+            width: 100px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 50%;
+            box-shadow: inset 4px 4px 4px gray;
+            text-shadow: 3px 3px 4px gray;
+            transition-duration: 0.2s;
+        }
+
+        .heart:hover {
+            text-shadow: 6px 6px 4px gray;
+            transform: rotate(-20deg);
+        }
+
+        .heart:active {
+            text-shadow: 2px 2px 4px gray;
+            color: red;
+            transform: rotate(5deg);
+            font-size: 65px;
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .box {
+            width: fit-content;
+            padding: 5px 20px;
+            font-family: monospace;
+            text-align: center;
+            border-radius: 2px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Emoji Counters</h1>
+<section>
+    <div class="box">
+        <div class="heart-container" onclick="handleheartClicked()">
+            <i class="heart fa-solid fa-heart"></i>
+            <img src="shivu.png" class="overlay-image" />
+        </div>
+        <p>heart: <span id="heart-count">0</span></p>  
+    </div>
+</section>
+
+<script>
+    function handleheartClicked() {
+        const ele = document.getElementById("heart-count");
+        let heartcount = parseInt(ele.innerText);
+        heartcount++;
+        ele.innerText = heartcount;
+    }
+</script>
+
+</body>
+</html>
